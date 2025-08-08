@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Embed fontstyle from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">         
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">                          
+    
+    <!--Link CSS file-->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--Icons from Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#intro">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/georginarms17" target="_blank">
+                        <i class="fa-brands fa-github"></i> Github
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/georgina-ramos-50b140378/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:georginaramos0317@gmail.com">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECTION 1: Introduction-->
+        <section class="intro"> 
+            <div class="text">
+                <h2>Hi, I am Georgina!</h2>
+                <p>I am a 3rd Year student taking BS in Computer Science from De La Salle Lipa. Taking my time to learn and improve my skills!</p>
+
+                <div class="links">
+                    <a href="#projects">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="picture">
+                <img src="ID wo bg.png" alt="headshot">
+            </div>
+        </section>
+
+        <!-- SECTION 2: Projects-->
+        <section id="projects" class="project-section">
+        <div class="container">
+            <h2 class="text-center mb-5">My Projects</h2>
+            <div class="project-row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card h-100 w-100">
+                        <img src="theSentinel.png" class="imgTheSentinel" alt="theSentinel">
+                        <div class="card-body">
+                            <h5 class="card-title project-title" onclick="changeBackground()">The Sentinel</h5>
+                            <p class="card-text">
+                                Applicaton for the farmers to easily identify the pests and/or diseases that their crops may have.
+                            </p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card h-100 w-100">
+                        <img src="HomeCurate.png" class="imgHomeCurate" alt="HomeCurate">
+                        <div class="card-body">
+                            <h5 class="card-title project-title" onclick="changeBackground()">HomeCurate</h5>
+                            <p class="card-text">Visualize the interior or exterior design of any area of their home.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card h-100 w-100">
+                        <img src="recipehaven.png" class="imgRecipeHaven" alt="RecipeHaven">
+                        <div class="card-body">
+                            <h5 class="card-title project-title" onclick="changeBackground()">RecipeHaven</h5>
+                            <p class="card-text">RecipeHaven is an application where users can browse a wide variety of recipes from many cuisines.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1ModalLabel">The Sentinel Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        “The Sentinel” is an application for agricultural sector which can analyze the images submitted by farmers through real-time tracking to detect possible signs of pests or diseases. The system will provide initial recommendations and alternative suggestions to address the identified issue. Afterward, the captured image and its analysis will be forwarded to the agriculturist for further review, allowing them to give expert advice and confirmation. Submitted entries by the agriculturists can also be added into the database which is an opportunity for the app to improve the data within the application which are also verified by the Admin before being added.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project2ModalLabel">HomeCurate Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        By uploading a picture of the area they want to plan out the design, the user can put pieces of furniture in the picture where the furntures they choose adjusts to their liking. Users can also browse through furniture library and view details of specific furniture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project3ModalLabel">RecipeHaven Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Browse through the various recipes of different cuisines and gain the list of ingredients and procedures for future reference! 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- SECTION 3: Contact -->
+        <section id="contact" class="form-section">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                    <p>Feel free to reach out by sending a message through this form!</p>
+                </div>
+            
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+              
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required />
+                        </div>
+              
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn custom-submit">Submit</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">&copy; 2025 Georgina Ramos. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Link JS file-->
+    <script src="portfolio.js"></script>
+</body>
+</html>
